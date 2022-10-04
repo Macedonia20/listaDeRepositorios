@@ -17,13 +17,13 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx'], 
  },
  devServer: {
-   static: path.resolve(__dirname, 'public'),
+   static: path.resolve(__dirname),
    hot: true,
  },
  plugins: [
     isDevelopment && new ReactRefreshWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html')
+      template: path.resolve(__dirname, 'index.html')
     })
   ].filter(Boolean),
   module: {
